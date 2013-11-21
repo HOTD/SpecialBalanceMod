@@ -1,5 +1,9 @@
 package com.HOTD.SpecialBalanceMod;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Timer;
+
 import com.HOTD.SpecialBalanceMod.core.proxy.CommonProxy;
 import com.HOTD.SpecialBalanceMod.lib.References;
 
@@ -30,12 +34,14 @@ public class SpecialBalanceMod {
 	}
 	
 	@EventHandler
-	public void init(FMLInitializationEvent event){
-	
+	public void init(FMLInitializationEvent event)
+	{
+		proxy.registerRenderers();
+		//Mod Edits
+		ModEdits.TinkersEdits();
 	}
 	
 	@EventHandler
 	public void postinit(FMLPostInitializationEvent event){
-		
 	}
 }
